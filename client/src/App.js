@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Homepage from './components/Homepage';
-import Login from "./pages/Login";
+
 import NavBar from "./components/Navbar";
 import Forum from './components/Forum';
 import AboutUs from './components/AboutUs';
@@ -13,23 +13,11 @@ import {
 } from "react-router-dom";
 
 function App() {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    // auto-login
-    fetch("/me").then((r) => {
-      if (r.ok) {
-        r.json().then((user) => setUser(user));
-      }
-    });
-  }, []);
-
-  if (!user) return <Login onLogin={setUser} />;
 
   return (
     <BrowserRouter>
     <div className='App'>
-      <NavBar user={user} setUser={setUser} />
+      <NavBar />
       <Routes>
       <Route path={'/'}  element={<Homepage />} />
         <Route path={"/Forum"}  element={<Forum />} />
