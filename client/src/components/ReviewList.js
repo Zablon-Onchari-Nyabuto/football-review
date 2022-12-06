@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReviewTable from "./ReviewTable";
 
-function ReviewList (reviews) {
+function ReviewList () {
+    const [reviews, setReviews] = useState([]);
+    useEffect(() => {
+        fetch("/reviews")
+          .then((r) => r.json())
+          .then(setReviews);
+      }, []);
     console.log(reviews)
     return (
         <table className="ui celled striped padded table">
