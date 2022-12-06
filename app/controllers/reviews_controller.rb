@@ -2,7 +2,7 @@ class ReviewsController < ApplicationController
       # GET /reviews
   def index
     reviews = Review.all
-    render json: plants
+    render json: reviews
   end
 
   # GET /reviews/:id
