@@ -8,16 +8,16 @@ function ReviewList (reviews) {
       <tbody>
         <tr>
           <th>
+            <h3 className="ui center aligned header">Username</h3>
+          </th>
+          <th>
+            <h3 className="ui center aligned header">Match</h3>
+          </th>
+          <th>
             <h3 className="ui center aligned header">Date</h3>
           </th>
           <th>
             <h3 className="ui center aligned header">Description</h3>
-          </th>
-          <th>
-            <h3 className="ui center aligned header">Category</h3>
-          </th>
-          <th>
-            <h3 className="ui center aligned header">strength</h3>
           </th>
         </tr>
         {reviews.map((review) => (
