@@ -1,3 +1,3 @@
 Rails.application.routes.draw do
-  resources :recipes, only: [:index, :create, :post,]
+  resources :reviews, only: [:index, :create, :post, :destroy]
 end
