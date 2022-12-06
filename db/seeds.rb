@@ -10,4 +10,4 @@ review1 = Review.create(username: "Johhny Bravo", match: "Brazil Vs South Koreab
 review2 = Review.create(username: "Simple Simon", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
 review3 = Review.create(username: "Walter White", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
 review4 = Review.create(username: "Peter John", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
-review5 = Review.create(username: "Ali karim", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
+review5 = Review.create(username: "Ali Karim", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )

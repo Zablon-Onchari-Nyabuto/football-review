@@ -8,7 +8,6 @@ function ReviewList () {
           .then((r) => r.json())
           .then(setReviews);
       }, []);
-    console.log(reviews)
     return (
         <table className="ui celled striped padded table">
       <tbody>
