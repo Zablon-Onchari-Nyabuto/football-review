@@ -1,16 +1,20 @@
-import React from 'react'
-import { Nav } from 'react-bootstrap';
-import { NavLink } from 'react-router-dom';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-
-const NavBar = () => {
+function NavBar() {
     return (
-        <Nav className="bg-dark text-white p-3" defaultActiveKey="/" as="ul">
-            <NavLink className='m-2' to='/' > Homepage</NavLink>
-            <NavLink className='m-2' to="/forum" > Forum</NavLink>
-            <NavLink className='m-2' to="/aboutus"  > About Us</NavLink>
-            <NavLink className='m-2' to="/contactus" > Contact Us</NavLink>
-        </Nav>
-    )
+        <Navbar bg="dark" variant="dark">
+            <Container>
+                <Nav className="me-auto">
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="forum">Forum</Nav.Link>
+                    <Nav.Link href="aboutus">About Us</Nav.Link>
+                    <Nav.Link href="contactus">Contact Us</Nav.Link>
+                </Nav>
+            </Container>
+        </Navbar>
+    );
 }
+
 export default NavBar;
