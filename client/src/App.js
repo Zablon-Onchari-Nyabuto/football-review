@@ -31,8 +31,9 @@ function App() {
       <div className='App'>
         <NavBar user={user} setUser={setUser} />
         <Routes>
-          <Route path={'/new'} element={<Homepage user={user} />} />
-          <Route path={"/Forum"} element={<Forum />} />
+          <Route path={'/'} element={<Homepage user={user} />} />
+          <Route path={'/homepage'} element={<Homepage />} />
+          <Route path={"/forum"} element={<Forum />} />
           <Route path={"/aboutus"} element={<AboutUs />} />
           <Route path={"/contactus"} element={<ContactUs />} />
         </Routes>
