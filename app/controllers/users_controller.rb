@@ -1,17 +1,19 @@
 class UsersController < ApplicationController
-    rescue_from ActiveRecord::RecordNotFound, with: :record_not_found
+    skip_before_action :authorize, only: :create
 
-    def index
-        render json: User.all, status: :ok
+    def create
+     user = User.create!(user_params)
+     session[:user_id] = user.id
+     render json: user, status: :created
     end
 
     def show
-        hero = User.find(params[:id])
-        render json: hero, status: :ok
+     render json: @current_user
     end
 
     private
-    def record_not_found
-        render json: {error: "User not found"}, status: 404
+
+    def user_params
+     params.permit(:username, :password, :password_confirmation, :image_url, :bio)
     end
 end

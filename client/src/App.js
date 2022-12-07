@@ -29,7 +29,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className='App'>
-        <NavBar />
+        <NavBar user={user} setUser={setUser} />
         <Routes>
           <Route path={'/'} element={<Homepage />} />
           <Route path={"/Forum"} element={<Forum />} />
