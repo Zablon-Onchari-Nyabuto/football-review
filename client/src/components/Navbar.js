@@ -1,10 +1,17 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Button from 'react-bootstrap/Button';
+import { Button }from "../styles";
 
 
-function NavBar() {
+function NavBar({ user, setUser }) {
+    function handleLogoutClick() {
+        fetch("/logout", { method: "DELETE" }).then((r) => {
+            if (r.ok) {
+                setUser(null);
+            }
+        });
+    }
     return (
         <Navbar bg="dark" variant="dark">
             <Container>
@@ -13,6 +20,9 @@ function NavBar() {
                     <Nav.Link href="forum">Forum</Nav.Link>
                     <Nav.Link href="aboutus">About Us</Nav.Link>
                     <Nav.Link href="contactus">Contact Us</Nav.Link>
+                    <Button variant="outline" onClick={handleLogoutClick}>
+                        Logout
+                    </Button>
                 </Nav>
             </Container>
         </Navbar>

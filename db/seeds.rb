@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-review1 = Review.create(username: "Johhny Bravo", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
+review1 = Review.create(username: "Johhny Bravo", match: "Brazil Vs South Korea", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
 review2 = Review.create(username: "Simple Simon", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
 review3 = Review.create(username: "Walter White", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
 review4 = Review.create(username: "Peter John", match: "Brazil Vs South Koreab", date: "06-12-2022", description: "The match was intense and the samba boysb took immediate control with the first shot on target" )
