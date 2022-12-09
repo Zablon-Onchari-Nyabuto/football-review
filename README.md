@@ -1,6 +1,6 @@
 # README
 
-# Jobs Portal API
+# Football Review API
 
 Football Review is a rails API that provides a way to show, create, update and delete reveiws. 
 
@@ -9,7 +9,7 @@ Football Review is a rails API that provides a way to show, create, update and d
 
 ```json
 {
-  "username": "john",
+  "username": "Zablon Onchari",
   "password": "password"
 }
 ```
