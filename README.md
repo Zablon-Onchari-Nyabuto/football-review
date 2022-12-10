@@ -117,7 +117,7 @@ Football Review is a rails API that provides a way to show, create, update and d
 
 ```json
 {
-  "success": "Job created successfully"
+  "success": "review created successfully"
 }
 ```
 

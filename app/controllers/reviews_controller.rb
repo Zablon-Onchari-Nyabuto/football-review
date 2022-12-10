@@ -13,7 +13,7 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   def create
-    user = User.find(session[:user_id])
+    user = User.find(session[:user])
     review = Review.create(username: review_params[:username], match: review_params[:match], date: review_params[:date], description: review_params[:description]
     )
     render json: review, status: :created

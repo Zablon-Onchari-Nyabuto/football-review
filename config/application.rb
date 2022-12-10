@@ -27,7 +27,15 @@ module Football
     config.action_dispatch.cookies_same_site_protection = :strict
 
     # Configuration for the application, engines, and railties goes here.
-    #
+    config.middleware.insert_before 0, Rack::Cors do
+      allow do
+      origins '*'
+      resource '*',
+      :headers => :any,
+      :methods => [:get, :post, :delete, :put, :patch, :options, :head],
+      :max_age => 0
+  end
+end
     # These settings can be overridden in specific environments using the files
     # in config/environments, which are processed later.
     #
